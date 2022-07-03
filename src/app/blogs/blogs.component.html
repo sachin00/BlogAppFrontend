@@ -1,0 +1,15 @@
+<div *ngIf="this.userService.isLoggedIn.value">
+    <app-dashboard></app-dashboard>
+    <br><br>
+    <div *ngFor="let b of this.userService.blogs">
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{ b.title }}</h5>
+                <small>By {{ b.username }}</small>
+              </div>
+              <p class="mb-1">{{ b.description }}</p>
+            </a>
+        </div>
+    </div>
+</div>

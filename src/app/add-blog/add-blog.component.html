@@ -1,0 +1,18 @@
+<app-dashboard></app-dashboard>
+<div class="container max-w-sm mx-auto py-8 items-center justify-center px-2">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Title</label>
+        <input type="text" [(ngModel)]="title" class="form-control" id="exampleFormControlInput1" placeholder="Enter Blog Title">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+        <textarea [(ngModel)]="desc" class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+    </div>
+
+    <input
+        type="submit"
+        class="w-full text-center py-3 rounded btn btn-dark hover:bg-green-dark focus:outline-none my-1"
+        value="Post"
+        (click)="postBlog()"
+    >
+</div>
