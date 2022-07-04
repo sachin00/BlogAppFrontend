@@ -22,6 +22,7 @@ export class SignUpComponent implements OnInit {
 
   onSubmit(form: NgForm)
   {
+    this.userService.isLoggedIn.next(true);
     this.userService.registerUser(form.value).subscribe(
       res => {
         let t = JSON.parse(JSON.stringify(res));
