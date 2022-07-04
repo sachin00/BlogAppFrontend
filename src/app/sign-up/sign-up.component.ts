@@ -26,6 +26,7 @@ export class SignUpComponent implements OnInit {
       res => {
         let t = JSON.parse(JSON.stringify(res));
         this.userService.isLoggedIn.next(true);
+        this.userService.isLoggedIn.value = true;
         localStorage.setItem('authtoken',t.token);
         localStorage.setItem('username',t.name);
         this.router.navigate(['/blogs'])
