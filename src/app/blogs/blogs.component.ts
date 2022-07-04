@@ -29,5 +29,4 @@ export class BlogsComponent implements OnInit {
       }
     )
   }
-
 }
