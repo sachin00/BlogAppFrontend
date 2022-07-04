@@ -27,6 +27,7 @@ export class UserService {
 
   registerUser(user: User)
   {
+    this.isLoggedIn.next(true);
     return this.http.post(environment.apiBaseUrl+'/users/register',user);
   }
 
